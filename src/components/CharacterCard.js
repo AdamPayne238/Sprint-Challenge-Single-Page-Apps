@@ -1,21 +1,24 @@
 import React from "react";
 
+import styled from "styled-components";
+
+const CardContainer = styled.div`
+height: 400px;
+width: 400px;
+background: teal;
+`;
+
 export default function CharacterCard(props) {
   return (
-  <div>
+    
+  <CardContainer>
+  
   <h1>{props.name}</h1>
   <p>{props.gender}</p>
   <p>{props.species}</p>
   <p>{props.status}</p>
-  <image>{props.image}</image>
+  <div>{props.image}</div>
 
-  </div>
+  </CardContainer>
   )
 }
-
-
-// name={characters.name}
-// gender={characters.gender}
-// species={characters.species}
-// status={characters.status}
-// image={characters.image}

@@ -4,6 +4,9 @@ import axios from "axios";
 
 import CharacterCard from './CharacterCard';
 
+import { Link } from "react-router-dom";
+
+
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [ character, setCharacter ] = useState([]);
@@ -20,10 +23,16 @@ export default function CharacterList() {
 
   return (
     <section className="character-list">
-      
+      <Link to="/" className="home-button">Home</Link>
+
+       
+
       {character.map(characters => {
 
         return (
+
+          <Link to={`/characters/${characters.id}`} >
+        
           <CharacterCard
           name={characters.name}
           gender={characters.gender}
@@ -31,9 +40,13 @@ export default function CharacterList() {
           status={characters.status}
           image={characters.image}
           />
+
+          </Link>
+
         );
       })}
 
+    
 
     </section>
   );
