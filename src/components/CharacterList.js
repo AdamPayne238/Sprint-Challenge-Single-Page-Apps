@@ -24,6 +24,8 @@ export default function CharacterList() {
   return (
     <section className="character-list">
       <Link to="/" className="home-button">Home</Link>
+      <Link to="/searchform/" className="form-button">SearchForm</Link>
+      
 
        
 

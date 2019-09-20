@@ -8,6 +8,7 @@ import WelcomePage from './components/WelcomePage';
 // import CharacterCard from './components/CharacterCard';
 
 import { Route } from 'react-router-dom';
+import SearchForm from "./components/SearchForm.js";
 
 
 export default function App() {
@@ -20,6 +21,8 @@ export default function App() {
 
 
       <Route path="/characters/:id" component={CharacterList} />
+
+      <Route path="/searchform/" component={SearchForm} />
 
     </main>
   );
